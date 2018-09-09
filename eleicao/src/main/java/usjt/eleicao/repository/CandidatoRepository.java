@@ -17,16 +17,6 @@ public class CandidatoRepository implements ICandidatoRepository {
 
 	
 	public Iterable<Candidato> findAll() {
-		if (list.size() == 0) {
-			Candidato candidato = new Candidato();
-			candidato.setCpf("1111");
-			candidato.setApto("11");
-			candidato.setNome("Jose da Silva");
-			candidato.setPlataforma("teste");
-			list.add(candidato);
-		}
-
-		
 		return list;
 	}
 
