@@ -15,7 +15,7 @@ import usjt.eleicao.modelo.Candidato;
 import usjt.eleicao.repository.ICandidatoRepository;
 
 @RestController
-@RequestMapping("/candidato")
+@RequestMapping("/eleicao")
 public class CandidatoResource {
 	@Autowired
 	private ICandidatoRepository cr;

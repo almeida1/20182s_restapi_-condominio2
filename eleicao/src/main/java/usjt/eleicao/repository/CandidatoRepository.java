@@ -11,12 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import usjt.eleicao.modelo.Candidato;
 
-@RestController
-@RequestMapping("/eleicao")
+
 public class CandidatoRepository implements ICandidatoRepository {
 	ArrayList<Candidato> list = new ArrayList<Candidato>();
 
-	@GetMapping(produces = "application/json")
+	
 	public Iterable<Candidato> findAll() {
 		if (list.size() == 0) {
 			Candidato candidato = new Candidato();
@@ -31,13 +30,13 @@ public class CandidatoRepository implements ICandidatoRepository {
 		return list;
 	}
 
-	@PostMapping
+	
 	public Candidato save(@RequestBody Candidato candidato) {
 		list.add(candidato);
 		return candidato;
 	}
 
-	@DeleteMapping
+
 	public void delete(Candidato candidato) {
 		list.remove(candidato);
 	
